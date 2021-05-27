@@ -14,7 +14,7 @@ class App extends Component {
           <Slider />
           <hr className="my-2" />
           <p className="lead">
-            <Button color="primary">Exhorbi Consult</Button>
+            <Button color="primary" href="https://exhorbi.herokuapp.com/" target="_blank" >Exhorbi Consult</Button>
           </p>
           <p className="lead">
             <Button color="primary">Noli Publishers</Button>
