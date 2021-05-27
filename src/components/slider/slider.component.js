@@ -4,7 +4,9 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption
+    CarouselCaption,
+    Jumbotron,
+    Container
 } from 'reactstrap';
 import g1 from '../../media/slide-pictures/gallery1.jpg';
 import g2 from '../../media/slide-pictures/gallery2.jpg';
@@ -64,16 +66,26 @@ const Slider = (props) => {
     });
 
     return (
-        <Carousel
-            activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-        >
-            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-            {slides}
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
+
+        <Jumbotron fluid>
+            <Container fluid>
+                <h1 className="h1">The Company</h1>
+                <hr className="heading-horizon" />
+                <br />
+                <Carousel
+                    activeIndex={activeIndex}
+                    next={next}
+                    previous={previous}
+                >
+                    <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                    {slides}
+                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                    <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                </Carousel>
+            </Container>
+        </Jumbotron>
+
+
     );
 }
 
